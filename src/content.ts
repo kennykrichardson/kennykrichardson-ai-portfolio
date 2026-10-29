@@ -69,7 +69,7 @@ export const siteContent = {
       live: 'https://quartly.onrender.com',
     },
     {
-      name: 'FlashFrame OCR',
+      name: 'FlashText OCR',
       category: 'OCR / DOCUMENT INTELLIGENCE',
       description: 'A browser-based OCR application that extracts text from images using Tesseract.js.',
       stack: ['Tesseract.js', 'OCR', 'TypeScript'],
