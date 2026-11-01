@@ -79,6 +79,14 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid 
 .magnetic-button:active::before, .magnetic-button:active::after { right: 3px; left: 3px; }
 .magnetic-button:active::before { top: 3px; }
 .magnetic-button:active::after { bottom: 3px; }
+.magnetic-button--primary, .magnetic-button--ghost, .magnetic-button--outline { color: #f4f2ef; }
+.magnetic-button--outline .button-surface { position: relative; display: inline-flex; align-items: center; gap: 8px; padding: 10px 13px; overflow: hidden; background: #0f1923; color: #fff; box-shadow: inset 0 0 0 1px transparent; }
+.magnetic-button--outline .button-surface::after { content: ''; position: absolute; right: 0; bottom: 0; width: 4px; height: 4px; background: #0f1923; transition: background .2s ease; }
+.magnetic-button--outline .button-sl { position: absolute; top: 0; bottom: -1px; left: -8px; width: 0; background: #ff4655; transform: skew(-15deg); transition: width .2s ease; }
+.magnetic-button--outline .button-label, .magnetic-button--outline svg { position: relative; z-index: 1; }
+.magnetic-button--outline:hover .button-sl { width: calc(100% + 15px); }
+.magnetic-button--outline:hover .button-surface::after { background: #fff; }
+.magnetic-button--outline:hover { color: #fff; }
 .magnetic-button svg { flex: 0 0 auto; }
 .side-note { position: absolute; z-index: 2; display: flex; flex-direction: column; gap: 7px; color: #aaa6a4; font: 9px var(--mono); letter-spacing: 2.3px; }
 .side-note i { display: block; width: 21px; height: 3px; margin-top: 6px; background: var(--red); }
@@ -145,6 +153,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid 
 .stack-list, .skill-tags { display: flex; flex-wrap: wrap; gap: 5px; }
 .stack-list span, .skill-tags span { padding: 5px 7px; border: 1px solid rgba(255, 255, 255, .12); border-radius: 5px; background: rgba(255, 255, 255, .025); color: #c1bdbc; font: 8px var(--mono); }
 .project-card-bottom { display: flex; align-items: center; justify-content: space-between; gap: 7px; margin-top: 10px; }
+.project-status { padding: 4px 6px; border: 1px dashed rgba(255, 255, 255, .22); border-radius: 4px; color: #8e8988; font: 7px var(--mono); letter-spacing: .5px; }
 .project-card-bottom a { display: grid; place-items: center; color: var(--red); }
 
 .feature-grid { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; width: min(var(--content-width), calc(100% - 12vw)); margin: 24px auto 0; }
@@ -202,6 +211,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid 
   .top-actions { gap: 5px; }
   .brand { font-size: 33px; }
   .magnetic-button { gap: 4px; padding: 5px; font-size: 9px; }
+  .magnetic-button--outline .button-surface { gap: 5px; padding: 8px 9px; }
   .magnetic-button svg { width: 15px; height: 15px; }
   .hero { min-height: 0; padding: 35px 16px 0; }
   .hero-intro { margin-top: 20px; font-size: 18px; }
@@ -263,6 +273,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid 
   background: rgba(255, 23, 52, .1);
   color: #fff;
 }
+.light .project-card-links a:hover { color: #171515; }
 
 
 /* Restored ambient orbital backdrop, softened so the content and particles stay legible. */
@@ -275,6 +286,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid 
 
 /* Mobile swipe rails: desktop keeps its original grid and wrapped prompt layout. */
 .feature-carousel { position: relative; width: 100%; }
+.carousel-arrow { display: none; }
 @media (max-width: 760px) {
   .feature-carousel { width: 100%; }
   .feature-grid {
@@ -301,6 +313,29 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid 
   .feature-card h2 { font-size: 14px; }
   .feature-card p { font-size: 9px; }
   .feature-arrow { top: 12px; right: 12px; }
+  .carousel-arrow {
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 42px;
+    padding: 0;
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: 12px;
+    color: rgba(255,255,255,.82);
+    background: rgba(18,18,20,.38);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 3px 18px rgba(0,0,0,.18);
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  .carousel-arrow--left { left: 1px; }
+  .carousel-arrow--right { right: 1px; }
+  .feature-arrow-left { left: 0; }
+  .feature-arrow-right { right: 0; }
   .prompt-carousel { position: relative; width: 100%; }
   .quick-prompts {
     display: flex;
@@ -327,6 +362,14 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid 
     font-size: 9px;
     background: rgba(12,12,12,.6);
   }
+  .prompt-arrow-left, .prompt-arrow-right {
+    top: 50%;
+    width: 27px;
+    height: 38px;
+    border-radius: 10px;
+  }
+  .prompt-arrow-left { left: 0; }
+  .prompt-arrow-right { right: 0; }
 }
 @media (max-width: 380px) {
   .feature-card { flex-basis: 80vw; min-width: 80vw; }
@@ -358,6 +401,11 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid 
     linear-gradient(115deg, transparent 30%, rgba(255, 23, 52, .08) 48%, transparent 62%),
     repeating-radial-gradient(ellipse at 32% 43%, transparent 0 58px, rgba(255, 35, 52, .045) 59px 60px, transparent 61px 78px);
 }
+.light .ambient-right {
+  background:
+    repeating-radial-gradient(ellipse at 32% 43%, transparent 0 24px, rgba(181, 0, 27, .13) 25px 26px, transparent 27px 43px),
+    radial-gradient(ellipse at 28% 42%, rgba(92, 16, 27, .78), rgba(28, 12, 15, .93) 58%, #171012 84%);
+}
 .swipe-hint { display: none; }
 .message a {
   color: #ff5266;
@@ -373,6 +421,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid 
   .topbar { width: calc(100% - 20px); min-height: 64px; gap: 8px; }
   .brand { margin-left: 0; }
   .top-actions { margin-right: 0; gap: 5px; }
+  .magnetic-button--outline .button-surface { padding: 8px 8px; }
   .prompt-carousel { width: 100%; }
   .quick-prompts {
     width: 100%;
@@ -394,6 +443,11 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid 
     scroll-snap-align: center;
   }
   .prompt-chip svg { display: none; }
+  .carousel-arrow,
+  .prompt-arrow-left,
+  .prompt-arrow-right,
+  .feature-arrow-left,
+  .feature-arrow-right { display: none !important; }
   .feature-grid {
     display: flex;
     width: calc(100% - 36px);
@@ -440,6 +494,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid 
 }
 @media (max-width: 380px) {
   .topbar { width: calc(100% - 16px); }
+  .magnetic-button--outline .button-surface { padding: 7px 6px; gap: 4px; }
   .feature-card { flex-basis: calc((100% - 12px) / 2); min-width: calc((100% - 12px) / 2); }
 }
 
@@ -536,4 +591,5 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid 
 }
 @media (max-width: 380px) {
   .topbar { width: calc(100% - 28px); }
+  .magnetic-button--outline .button-surface { padding: 7px 6px; gap: 4px; }
 }
