@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+@font-face {
+  font-family: "Osiris";
+  src: url("/fonts/Osiris.otf") format("opentype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   font-family: 'Manrope', sans-serif;
@@ -593,3 +600,132 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid 
   .topbar { width: calc(100% - 28px); }
   .magnetic-button--outline .button-surface { padding: 7px 6px; gap: 4px; }
 }
+
+
+/* NeuralLink hero visuals */
+.hero-neural-link {
+  position: absolute;
+  z-index: 1;
+  top: 13px;
+  width: clamp(190px, 17.2vw, 266px);
+  aspect-ratio: 1.05 / 1;
+background: rgba(8, 8, 8, .12);
+  overflow: hidden;
+  isolation: isolate;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.hero-neural-link--github { left: 7.9%; }
+.hero-neural-link--linkedin { right: 7.3%; }
+
+.hero-neural-link .neural-link {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  color: #f5f3f0;
+  background: transparent;
+  box-shadow: none;
+  text-decoration: none;
+  isolation: isolate;
+}
+
+.hero-neural-link .neural-link__visual {
+  position: absolute;
+  inset: 0;
+  display: block;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero-neural-link .neural-link__visual canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-neural-link .neural-link__caption {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 27px;
+  padding: 5px 8px;
+  border-top: 1px solid rgba(255, 26, 38, .42);
+  color: rgba(255, 255, 255, .76);
+  background: transparent;
+  font: 8px "Osiris", sans-serif;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.hero-neural-link .neural-link__number { color: #ff303b; }
+.hero-neural-link .neural-link__label { overflow: hidden; text-overflow: ellipsis; }
+.hero-neural-link .neural-link__arrow {
+  margin-left: auto;
+  color: #ff303b;
+  font-size: 12px;
+  transition: transform .2s ease;
+}
+.hero-neural-link .neural-link:hover .neural-link__arrow { transform: translate(3px, -3px); }
+.hero-neural-link .neural-link:focus-visible { outline: 2px solid #ff1a26; outline-offset: -4px; }
+
+@media (min-width: 761px) and (max-width: 1100px) {
+  .hero-neural-link {
+    top: 17px;
+    width: clamp(126px, 19.5vw, 150px);
+    aspect-ratio: 1.12 / 1;
+  }
+  .hero-neural-link--github { left: 12.8%; }
+  .hero-neural-link--linkedin { right: 16.8%; }
+  .hero-neural-link .neural-link__caption {
+    min-height: 23px;
+    padding: 4px 6px;
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero-neural-link {
+    top: 0;
+    width: clamp(88px, 25.5vw, 104px);
+    aspect-ratio: 1.08 / 1;
+  }
+  .hero-neural-link--github { left: 6.5%; }
+  .hero-neural-link--linkedin { right: 10%; }
+  .hero-neural-link .neural-link__caption {
+    min-height: 20px;
+    gap: 5px;
+    padding: 3px 5px;
+    font-size: 6px;
+    letter-spacing: .7px;
+  }
+  .hero-neural-link .neural-link__number { font-size: 6px; }
+  .hero-neural-link .neural-link__arrow { font-size: 10px; }
+}
+
+@media (max-width: 380px) {
+  .hero-neural-link { width: 25vw; }
+  .hero-neural-link--github { left: 6%; }
+  .hero-neural-link--linkedin { right: 9%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-neural-link .neural-link { transition: none; }
+}
+
+

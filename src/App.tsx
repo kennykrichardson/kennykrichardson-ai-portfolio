@@ -5,6 +5,7 @@ import {
 } from 'lucide-react'
 import { siteContent } from './content'
 import { ParticleField } from './components/ParticleField'
+import { NeuralLink } from './components/NeuralLink'
 
 type Message = { id: number; role: 'assistant' | 'user'; text: string }
 type Feature = 'about' | 'projects' | 'skills' | 'contact' | 'hobbies'
@@ -187,6 +188,12 @@ export default function App() {
       <aside className="side-note side-note-right" aria-hidden="true"><span>IDEAS</span><span>CODE</span><span>AI</span><span>REAL WORLD</span><i /></aside>
 
       <section className="hero">
+        <div className="hero-neural-link hero-neural-link--github">
+          <NeuralLink href='https://kennykrichardson.onrender.com' label="Portfolio" index="01" />
+        </div>
+        <div className="hero-neural-link hero-neural-link--linkedin">
+          <NeuralLink href='https://kennykrichardson-ml.onrender.com' label="My ML Projects" index="02" />
+        </div>
         <div className="hero-copy">
           <div className="eyebrow"><span className="live-dot" />{siteContent.eyebrow}</div>
           <p className="hero-intro">Hey, I’m</p>
