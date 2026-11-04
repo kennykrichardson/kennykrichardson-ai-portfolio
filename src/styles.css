@@ -637,6 +637,11 @@ background: rgba(8, 8, 8, .12);
   box-shadow: none;
   text-decoration: none;
   isolation: isolate;
+
+  /* Full-component touch target */
+  pointer-events: auto;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .hero-neural-link .neural-link__visual {
@@ -644,6 +649,11 @@ background: rgba(8, 8, 8, .12);
   inset: 0;
   display: block;
   overflow: hidden;
+  pointer-events: none;
+}
+
+/* Make the entire NeuralLink area respond to touch */
+.hero-neural-link .neural-link > * {
   pointer-events: none;
 }
 
