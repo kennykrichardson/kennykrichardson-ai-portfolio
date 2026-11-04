@@ -189,10 +189,10 @@ export default function App() {
 
       <section className="hero">
         <div className="hero-neural-link hero-neural-link--github">
-          <NeuralLink href='https://kennykrichardson.onrender.com' label="Portfolio" index="01" />
+          <NeuralLink href='https://kennykrichardson.com' label="Portfolio" index="01" />
         </div>
         <div className="hero-neural-link hero-neural-link--linkedin">
-          <NeuralLink href='https://kennykrichardson-ml.onrender.com' label="My ML Projects" index="02" />
+          <NeuralLink href='https://ml.kennykrichardson.com' label="My ML Projects" index="02" />
         </div>
         <div className="hero-copy">
           <div className="eyebrow"><span className="live-dot" />{siteContent.eyebrow}</div>
