@@ -10,7 +10,7 @@ I build intelligent applications, developer tools, desktop experiences,
 and interactive web projects.
 
 🌐 **[Explore My AI
-Portfolio](https://kennykrichardson-ai.onrender.com)**
+Portfolio](https://kennykrichardson-ai.com)**
 :::
 
 ------------------------------------------------------------------------
