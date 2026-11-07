@@ -1,4 +1,3 @@
-::: {align="center"}
 # 👋 Kenny Richardson
 
 ### 🚀 AI Engineer • Full-Stack Developer
@@ -10,11 +9,9 @@ I build intelligent applications, developer tools, desktop experiences,
 and interactive web projects.
 
 🌐 **[Explore My AI
-Portfolio](https://kennykrichardson-ai.com)**
-:::
+Portfolio](https://ai.kennykrichardson.com)**
 
 ------------------------------------------------------------------------
-
 ## 🛠️ Tech Stack
 
 ### 💻 Frontend & UI
