@@ -152,7 +152,7 @@ export default function App() {
     setChatOpen(true)
     if (feature === 'projects') setProjectsOpen(true)
     if (feature === 'skills') setSkillsOpen(true)
-    if (feature === 'about' || feature === 'contact' || feature === 'hobbies') setInfoOpen(feature)
+    if (feature === 'contact') setInfoOpen(feature)
     sendMessage(featureQuestions[feature], feature)
     if (feature !== 'projects') inputRef.current?.focus({ preventScroll: true })
   }
@@ -277,7 +277,7 @@ export default function App() {
       <footer className="site-footer" aria-label="Portfolio footer">
         <div className="footer-brand"><a className="brand" href="#home" aria-label="Back to top"><span>K</span><b>R</b></a></div>
         <div className="footer-copy">
-          <strong>Built with curiosity. Shipped with intent.</strong>
+          <strong>AI Portfolio. Engineered by Kenny Richardson Kodipally.</strong>
           <span>BUILD · LEARN · IMPROVE · REPEAT</span>
         </div>
         <nav className="footer-links" aria-label="Contact links">
@@ -285,7 +285,7 @@ export default function App() {
           <a href={siteContent.linkedin} target="_blank" rel="noreferrer"><Linkedin size={15} /> LinkedIn</a>
           <a href={`mailto:${siteContent.email}`}><Mail size={15} /> Email</a>
         </nav>
-        <p className="footer-copyright">© 2026 Kenny Richardson. Made to be useful.</p>
+        <p className="footer-copyright">© 2026 Kenny Richardson. All rights reserved.</p>
       </footer>
 
       {infoOpen && (

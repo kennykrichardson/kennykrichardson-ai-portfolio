@@ -202,16 +202,10 @@ export function NeuralLink({ href, label, index }: NeuralLinkProps) {
   }, []);
 
   return (
-    <motion.a
+    <motion.div
       className="neural-link"
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label={`Open ${label}`}
       initial={{ opacity: 0, y: 18 }}
       animate={{ opacity: 1, y: 0 }}
-      whileHover={{ y: -5 }}
-      whileTap={{ scale: 0.985 }}
       transition={{ duration: 0.45 }}
     >
       <span className="neural-link__visual" aria-hidden="true">
@@ -222,6 +216,13 @@ export function NeuralLink({ href, label, index }: NeuralLinkProps) {
         <span className="neural-link__label">{label}</span>
         <span className="neural-link__arrow" aria-hidden="true">↗</span>
       </span>
-    </motion.a>
+      <a
+        className="neural-link__hit-target"
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`Open ${label}`}
+      />
+    </motion.div>
   );
 }

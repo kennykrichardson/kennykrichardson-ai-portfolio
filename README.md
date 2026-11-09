@@ -71,7 +71,11 @@ An OCR-powered application that extracts text from images.
 
 ### Nexus Page
 
-![Nexus](screenshots/nexuspage.jpeg)
+![Nexus](screenshots/nexuspage.png)
+
+### Nexus Page - Home View
+
+![Nexus](screenshots/nexuspage.png)
 
 ------------------------------------------------------------------------
 
