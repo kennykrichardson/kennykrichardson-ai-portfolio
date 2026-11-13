@@ -30,6 +30,13 @@ export const siteContent = {
   ],
   projects: [
     {
+      name: 'Proximal Flap Autonomous Flight PPO',
+      category: 'RL AGENT TRAINING / FLAPPY BIRD SIMULATION',
+      description: 'Flappy Bird simulation featuring a PPO-trained reinforcement learning agent for autonomous flight, procedural obstacle generation and intelligent decision making.',
+      stack: ['Python', 'PPO', 'Reinforcement Learning', 'PyGame'],
+      repo: 'https://github.com/kennykrichardson/proximal-flap-autonomous-flight-ppo',
+    },
+    {
       name: 'Orzyn AI',
       category: 'AI / DEVELOPER INTELLIGENCE',
       description: 'An AI-powered GitHub intelligence platform that helps developers explore repository activity and make project information easier to understand.',
@@ -84,7 +91,7 @@ export const siteContent = {
       repo: 'https://github.com/kennykrichardson/fluid-deck-ai',
     },
     {
-      name: 'EchoDrive',
+      name: 'Mnemosyne AI',
       category: 'LOCAL AI / PERSONAL KNOWLEDGE',
       description: 'A desktop second-brain concept for working with files, using local data storage and vector search foundations.',
       stack: ['Electron', 'SQLite', 'LanceDB', 'Local AI'],
@@ -136,8 +143,9 @@ export const siteContent = {
         answer: 'Fluid Deck AI is a local AI parser for PowerPoint slide content, with an emphasis on local processing and automation. GitHub: https://github.com/kennykrichardson/fluid-deck-ai. A live deployment is not listed yet.',
       },
       {
-        keywords: ['echodrive', 'second brain', 'vector database', 'lancedb'],
-        answer: 'EchoDrive is a desktop second-brain project for working with files, built around Electron, SQLite, LanceDB, and local AI ideas. The project source currently points to my GitHub profile: https://github.com/kennykrichardson.',
+        name: 'Mnemosyne AI',
+        keywords: ['mnemosyne', 'second brain', 'vector database', 'lancedb'],
+        answer: 'Mnemosyne AI is a desktop second-brain project for working with files, built around Electron, SQLite, LanceDB, and local AI ideas. The project source currently points to my GitHub profile: https://github.com/kennykrichardson.',
       },
       {
         keywords: ['skill', 'skills', 'stack', 'technology', 'technologies', 'tech', 'language', 'tools'],
