@@ -32,6 +32,10 @@ Portfolio](https://ai.kennykrichardson.com)**
 
 ## 🚀 Featured Projects
 
+### 🐤 Proximal Flap - Autonomous Flight PPO
+
+Proximal Flap is a Flappy Bird simulation featuring a PPO-trained reinforcement learning agent for autonomous flight, procedural obstacle generation and intelligent decision making.
+
 ### ✍️ Lexyra AI
 
 An AI-powered writing assistant that transforms rough drafts into clear,
