@@ -100,6 +100,8 @@ Have an idea, collaboration, or opportunity in mind? Let's connect.
     [linkedin.com/in/kennykrichardson](https://linkedin.com/in/kennykrichardson)
 -   🐙 **GitHub:**
     [github.com/kennykrichardson](https://github.com/kennykrichardson)
+-   🌐 **Complete Portfolio:**
+    [github.com/kennykrichardson](https://www.kennykrichardson.com)
 
 ------------------------------------------------------------------------
 
