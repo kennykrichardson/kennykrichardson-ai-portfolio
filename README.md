@@ -1,4 +1,4 @@
-# 👋 Kenny Richardson
+# 👋 Kenny Richardson Kodipally
 
 ### 🚀 AI Engineer • Full-Stack Developer
 
@@ -8,25 +8,33 @@ thoughtful design.**
 I build intelligent applications, developer tools, desktop experiences,
 and interactive web projects.
 
-🌐 **[Explore My AI
-Portfolio](https://ai.kennykrichardson.com)**
+🌐 **[Explore My AI Portfolio](https://ai.kennykrichardson.com)**
 
 ------------------------------------------------------------------------
 ## 🛠️ Tech Stack
 
-### 💻 Frontend & UI
-
--   ⚛️ React
--   📘 TypeScript
--   ⚡ Vite
--   🎨 Tailwind CSS
--   🎭 Framer Motion
-
-### 🌌 3D & Graphics
-
--   🧊 Three.js
--   🎮 React Three Fiber
--   ✨ React Three Drei
+<table>
+  <tr>
+    <th>💻 Frontend &amp; UI</th>
+    <th>🌌 3D &amp; Graphics</th>
+  </tr>
+  <tr>
+    <td>⚛️ React</td>
+    <td>🧊 Three.js</td>
+  </tr>
+  <tr>
+    <td>📘 TypeScript</td>
+    <td>🎮 React Three Fiber</td>
+  </tr>
+  <tr>
+    <td>⚡ Vite</td>
+    <td>✨ React Three Drei</td>
+  </tr>
+  <tr>
+    <td>🎨 Tailwind CSS</td>
+    <td>🎭 Framer Motion</td>
+  </tr>
+</table>
 
 ------------------------------------------------------------------------
 
@@ -105,9 +113,12 @@ copied, redistributed, modified, or used without explicit written
 permission.
 
 ------------------------------------------------------------------------
+<div align="center">
+    
+### Thanks for stopping by!
 
-::: {align="center"}
-### ⭐ Thanks for stopping by!
+ **Build • Learn • Improve • Repeat**
 
-**Build • Learn • Improve • Repeat**
-:::
+</div>
+
+# 🛠️ Engineered by Kenny Richardson Kodipally
